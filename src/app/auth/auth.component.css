@@ -1,0 +1,19 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.example-card {
+  width: 400px;
+  margin: 10% auto;
+}
+
+.mat-card-title {
+  font-size: 16px;
+}
+/*# sourceMappingURL=auth.component.css.map */

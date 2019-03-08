@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
     this.userSubscription = this.authService.$userSource.subscribe((user) => {
       this.user = user;
     });
+
   }
 
   logout(): void {

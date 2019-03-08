@@ -1,0 +1,48 @@
+header {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+header .logo {
+  background-image: url("../../assets/logo.png");
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+header .example-spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+header .links {
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  font-weight: initial;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  padding: 15px;
+}
+
+header .links.side {
+  padding: 0 14px;
+}
+
+header .mat-toolbar {
+  background: black;
+}
+
+header .mat-icon {
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+header a {
+  cursor: pointer;
+}
+/*# sourceMappingURL=header.component.css.map */
