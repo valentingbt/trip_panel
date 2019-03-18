@@ -5,6 +5,10 @@
   src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
 }
 
+.logo_section .logo {
+  width: 140px;
+}
+
 p,
 a {
   font-family: ProductSans;
@@ -16,10 +20,7 @@ a {
   border-radius: 10px;
 }
 
-#logo {
-  height: 140px;
-}
-
+c
 .is-not-done {
   -webkit-filter: opacity(0.7);
           filter: opacity(0.7);

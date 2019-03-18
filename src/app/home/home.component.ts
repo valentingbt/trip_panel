@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import * as L from 'leaflet';
 
@@ -9,7 +10,9 @@ import * as L from 'leaflet';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
     // Déclaration de la carte avec les coordonnées du centre et le niveau de zoom.
@@ -18,6 +21,10 @@ export class HomeComponent implements OnInit {
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: 'MAP'
     }).addTo(map);
+  }
+
+  navigate(link): void {
+    this.router.navigate([link]);
   }
 
 }

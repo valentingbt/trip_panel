@@ -1,24 +1,27 @@
-header {
-  width: 100%;
-  left: 0;
+.mat-toolbar {
+  overflow: hidden;
+  position: fixed;
   bottom: 0;
+  width: 100%;
+  height: 30px;
+  opacity: 0.5;
 }
 
-header .logo {
+.mat-toolbar .logo {
   background-image: url("../../assets/logo.png");
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-header .example-spacer {
+.mat-toolbar .example-spacer {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
 
-header .links {
+.mat-toolbar .links {
   color: white;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 15px;
@@ -26,23 +29,19 @@ header .links {
   letter-spacing: -1px;
   line-height: 1;
   text-align: center;
-  padding: 15px;
+  opacity: 1;
 }
 
-header .links.side {
-  padding: 0 14px;
-}
-
-header .mat-toolbar {
+.mat-toolbar .mat-toolbar {
   background: black;
 }
 
-header .mat-icon {
+.mat-toolbar .mat-icon {
   vertical-align: middle;
   margin: 0 5px;
 }
 
-header a {
+.mat-toolbar a {
   cursor: pointer;
 }
 /*# sourceMappingURL=header.component.css.map */

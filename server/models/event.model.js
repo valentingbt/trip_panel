@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const EventSchema = new mongoose.Schema({
     date: {
-        type: Date(),
+        type: Date,
         required: true
     },
     name: {
@@ -16,14 +16,14 @@ const EventSchema = new mongoose.Schema({
     description: {
         type: String
     },
-    position: {
-        long: {
-            type: Number
-        },
-        lat: {
-            type: Number
-        }
+
+    longitude: {
+        type: Number
+    },
+    latitude: {
+        type: Number
     }
+
 });
 
 module.exports = mongoose.model('Event', EventSchema);
