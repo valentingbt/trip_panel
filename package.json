@@ -1,0 +1,25 @@
+{
+  "name": "trip_panel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentingbt/trip_panel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valentingbt/trip_panel/issues"
+  },
+  "homepage": "https://github.com/valentingbt/trip_panel#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "yargs": "^13.2.2"
+  }
+}
