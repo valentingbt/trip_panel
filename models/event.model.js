@@ -1,13 +1,14 @@
-const { mongoose } = require('../db/database');
+var { mongoose } = require('../db/database');
+var Schema = mongoose.Schema;
 
-const event = mongoose.model('Event', {
+var EventShema = new Schema({
     date: {
-        type: String,
-        required: true
+        type: Date,
+        [true, 'Veuillez ajouter une date']
     },
     name: {
         type: String,
-        required: true
+        required: [true, 'Veuillez ajouter un nom']
     },
     isDone: {
         type: Boolean,
@@ -24,4 +25,5 @@ const event = mongoose.model('Event', {
     }
 });
 
+var event = mongoose.model('Event', EventShema );
 module.exports = { event };
