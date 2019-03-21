@@ -9,10 +9,11 @@ var usersRouter = require('./routes/users');
 var catalogRouter = require('./routes/catalog');
 
 var app = express();
+var mongoose = require('mongoose');
 
 //Set up mongoose connection
-var mongoose = require('mongoose');
-var mongoDB = 'mongodb://127.0.0.1:27017/tripdb';
+var dev_db_url = 'mongodb+srv://valentin:nodejs@usa2019-577hr.mongodb.net/test?retryWrites=true'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
