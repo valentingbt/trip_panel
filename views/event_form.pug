@@ -1,0 +1,32 @@
+extends layout
+
+block content  
+  h1 #{title}
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='date') Date*:
+      input#date.form-control(name='date', type='datetime-local', required='true', value=(undefined===event ? '' : event.date))
+    
+      label(for='title') Titre*:
+      input#title.form-control(name='title', type='text', required='true', value=(undefined===event ? '' : event.title))
+    
+      label(for='description') Description:
+      textarea#description.form-control(name='description', value=(undefined===event ? '' : event.description), rows="5", cols="33")
+      
+      label(for='isDone') Etat*:
+      select#isDone.form-control(name='isDone', type='select', placeholder='Selectionnez etat', required='true')
+        option(value="false") Pas fait
+        option(value="true") Fait
+
+      label(for='longitude') Longitude:
+      input#longitude.form-control(name='longitude', type='number', value=(undefined===event ? '' : event.longitude))
+
+      label(for='latitude') Latitude:
+      input#latitude.form-control(name='latitude', type='number', value=(undefined===event ? '' : event.latitude))
+
+    button.btn.btn-primary(type='submit') Envoyer
+  if errors 
+   ul
+    for error in errors
+     li!= error.msg

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 #{title} "#{event.title}"
+  p #{event.day} #{event.hour}
+  
+    p Voulez-vous vraiment supprimer cet évenement
+    
+    form(method='POST' action='')
+      div.form-group
+        input#eventid.form-control(type='hidden',name='eventid', required='true', value=event._id )
+
+      button.btn.btn-primary(type='submit') Supprimer

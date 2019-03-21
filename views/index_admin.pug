@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Bienvenue sur #[em USABACKEND], notre backend pour le site USA 2019.
+
+  h1 Contenu dynamique
+
+  if error
+    p Error getting dynamic content.
+  else
+    p Contenu de la base de donnée :
+
+    ul
+      li #[strong Evenements:] !{data.event_count}
