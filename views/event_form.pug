@@ -15,7 +15,7 @@ block content
       textarea#description.form-control(name='description', value=(undefined===event ? '' : event.description), rows="5", cols="33")
       
       label(for='isDone') Etat*:
-      select#isDone.form-control(name='isDone', type='select', placeholder='Selectionnez etat', required='true')
+      select#isDone.form-control.browser-default(name='isDone', type='select', placeholder='Selectionnez etat', required='true')
         option(value="false") Pas fait
         option(value="true") Fait
 

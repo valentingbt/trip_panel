@@ -4,23 +4,30 @@ html(lang='fr')
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    // Compiled and minified CSS
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+
+    // Import Google Icon Font
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+
+  
   body
     div(class='container-fluid')
       div(class='row')
-        div(class='col-sm-2')
+        div(class='col s2')
           block sidebar
-            ul(class='sidebar-nav')
+            ul(class='collection')
               li 
-                a(href='/catalog') Accueil
+                a.collection-item(href='/catalog') Accueil
               li 
-                a(href='/catalog/events') Tous les évenements
+                a.collection-item(href='/catalog/events') Tous les évenements
               li 
-                hr
+                div.divider
               li 
-                a(href='/catalog/event/create') Créer un nouvel evenement
-        div(class='col-sm-10')
+                a.collection-item(href='/catalog/event/create') Créer un nouvel evenement
+        div(class='col s6')
           block content
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js')
