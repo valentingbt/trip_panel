@@ -1,16 +1,14 @@
 head    
     // LeafletJS
     link(href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css' rel='stylesheet')
-    script(src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js')
     // Pulse Master
     link(href='./stylesheets/L.Icon.Pulse.css' rel='stylesheet')
-    script(src='./javascripts/L.Icon.Pulse.js')
     // Bulma
     link(href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css' rel='stylesheet')
-    script(src='https://use.fontawesome.com/releases/v5.3.1/js/all.js' defer='')
 
     link(href='/stylesheets/style.css', rel='stylesheet')
 
+include scripts.html
 // LOGO
 section.section
   .has-text-centered
@@ -212,3 +210,5 @@ section.section
               
               else
                 li There are no events.
+    
+    

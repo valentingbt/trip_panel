@@ -2,14 +2,16 @@ extends layout
 
 block content
 
+  include scripts.html
   link(rel='stylesheet', href='/stylesheets/style.css')
 
   h1= title
   p Bienvenue sur #[em USABACKEND], notre backend pour le site USA 2019.
 
-  h3 Contenu dynamique
-
   #map
+  script(src='javascripts/map.js')
+
+  h3 Contenu dynamique
 
   if error
     p Error getting dynamic content.
@@ -18,6 +20,3 @@ block content
 
     ul
       li #[strong Evenements:] !{data.event_count}
-
-  include scripts.html
-  
