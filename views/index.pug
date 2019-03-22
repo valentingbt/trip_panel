@@ -3,8 +3,8 @@ head
     link(href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css' rel='stylesheet')
     script(src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js')
     // Pulse Master
-    link(href='./leaflet-icon-pulse-master/dist/L.Icon.Pulse.css' rel='stylesheet')
-    script(src='./leaflet-icon-pulse-master/dist/L.Icon.Pulse.js')
+    link(href='./stylesheets/L.Icon.Pulse.css' rel='stylesheet')
+    script(src='./javascripts/L.Icon.Pulse.js')
     // Bulma
     link(href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css' rel='stylesheet')
     script(src='https://use.fontawesome.com/releases/v5.3.1/js/all.js' defer='')
@@ -72,6 +72,8 @@ section.section
           .columns.is-vcentered
           .content.has-text-centered
             a(href='/catalog/') Connexion admin
+            p Heure France : #{todayParis}
+            p Heure Denver : #{todayDenver}
             // Content
     .tile.is-parent
       article.tile.is-child.notification.is-success
@@ -83,7 +85,7 @@ section.section
               each event in event_list
                 if event.day_number == "08"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
                         span.icon
@@ -96,10 +98,10 @@ section.section
               each event in event_list
                 if event.day_number == "09"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -109,10 +111,10 @@ section.section
               each event in event_list
                 if event.day_number == "10"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -122,10 +124,10 @@ section.section
               each event in event_list
                 if event.day_number == "11"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -135,10 +137,10 @@ section.section
               each event in event_list
                 if event.day_number == "12"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -148,10 +150,10 @@ section.section
               each event in event_list
                 if event.day_number == "13"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -161,10 +163,10 @@ section.section
               each event in event_list
                 if event.day_number == "14"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -174,10 +176,10 @@ section.section
               each event in event_list
                 if event.day_number == "15"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -187,10 +189,10 @@ section.section
               each event in event_list
                 if event.day_number == "16"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
@@ -200,10 +202,10 @@ section.section
               each event in event_list
                 if event.day_number == "17"
                     li.is-flex
-                      if event.isDone == false
+                      if event.date > dateFrance
                         a.button.is-success.is-loading.is-small a
                       else
-                        span.icon.is-small
+                        span.icon
                           i.fas.fa-check
 
                       p #{event.hour} #{event.title}
