@@ -10,17 +10,17 @@ head
 
 include scripts.html
 // LOGO
-div.field.is-grouped.is-grouped-multiline(style='position:absolute;right:0;margin-right:10px;')
+div.field.is-grouped.is-grouped-multiline(style='position:absolute;right:0;margin:10px 10px 0 0;')
 
   div.control
     div.tags.has-addons
-      span.tag.is-primary.is-large France
-      span.tag.is-large #{todayParis}
+      span.tag.is-primary.is-large.is-rounded France
+      span.tag.is-large.is-rounded #{todayParis}
   
   div.control
     div.tags.has-addons
-      span.tag.is-primary.is-large Denver
-      span.tag.is-large #{todayDenver}
+      span.tag.is-primary.is-large.is-rounded Denver
+      span.tag.is-large.is-rounded #{todayDenver}
 
 section.section
   .has-text-centered
@@ -79,9 +79,8 @@ section.section
             script(src='javascripts/map.js')
       .tile.is-parent
         article.tile.is-child.notification.is-warning
-          .columns.is-vcentered
-          .content.has-text-centered
-            a(href='/catalog/') Connexion admin
+          p.title Photos
+            
             // Content
     .tile.is-parent
       article.tile.is-child.notification.is-success
@@ -221,4 +220,4 @@ section.section
               else
                 li There are no events.
     
-    
+  a(href='/catalog/') Connexion admin
