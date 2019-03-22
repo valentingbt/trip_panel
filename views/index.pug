@@ -10,6 +10,18 @@ head
 
 include scripts.html
 // LOGO
+div.field.is-grouped.is-grouped-multiline(style='position:absolute;right:0;margin-right:10px;')
+
+  div.control
+    div.tags.has-addons
+      span.tag.is-primary.is-large France
+      span.tag.is-large #{todayParis}
+  
+  div.control
+    div.tags.has-addons
+      span.tag.is-primary.is-large Denver
+      span.tag.is-large #{todayDenver}
+
 section.section
   .has-text-centered
     a(href='#')
@@ -70,8 +82,6 @@ section.section
           .columns.is-vcentered
           .content.has-text-centered
             a(href='/catalog/') Connexion admin
-            p Heure France : #{todayParis}
-            p Heure Denver : #{todayDenver}
             // Content
     .tile.is-parent
       article.tile.is-child.notification.is-success
