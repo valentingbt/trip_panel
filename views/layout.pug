@@ -3,41 +3,31 @@ html(lang='fr')
   head
     title= title
     meta(charset='utf-8')
-    link(rel='stylesheet', href='/stylesheets/style.css')
 
-    // Import Google Icon Font
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
-    
-    // Compiled and minified Materialize CSS
-    link(rel='stylesheet' href='/stylesheets/materialize.min.css')
+    include stylesheets.html
 
     // Let browser know website is optimized for mobile
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    
-    link(href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css' rel='stylesheet')
-    link(href='./stylesheets/L.Icon.Pulse.css' rel='stylesheet')
+
 
   body
+    a.button.is-primary(href='/')
+      span.icon
+        i.fas.fa-chevron-left
+      span Retour sur le site
+    .columns(style='margin: 10px 0 0 10px;')
+      .column.is-one-fifth
+        aside.menu
+          p.menu-label General
+          ul.menu-list
+            li 
+              a(href='/catalog') Accueil administration
+          p.menu-label Planning
+          ul.menu-list
+            li
+              a(href='/catalog/events') Liste des évènements
+              a(href='/catalog/event/create') Créer un évenement
 
-
-
-
-
-    div(class='container-fluid')
-      div(class='row')
-        div(class='col s2')
-          block sidebar
-            ul(class='collection z-depth-2')
-              li 
-                a.waves-effect.collection-item.center-align.active(href='/') Retour au site
-              li 
-                a.waves-effect.collection-item(href='/catalog') Accueil
-              li 
-                a.waves-effect.collection-item(href='/catalog/events') Tous les évenements
-              li 
-                div.divider
-              li 
-                a.waves-effect.collection-item(href='/catalog/event/create') Créer un nouvel evenement
-        div(class='col s6')
-          block content
+      .column
+        block content
 

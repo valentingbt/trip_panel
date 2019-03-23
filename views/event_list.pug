@@ -2,14 +2,23 @@ extends layout
 
 block content
 
-  h1= title
-  ul
-    each event in event_list
-      li 
-        a(href=event.url) #{event.day} #{event.hour} "#{event.title}"
+  h1.title= title
+  table.table
+    thead
+      tr
+        th Date
+        th Heure
+        th Titre
+    tbody
+      each event in event_list
+        tr
+          td #{event.day} 
+          td #{event.hour}
+          td  
+             a(href=event.url) #{event.title}
 
-    else
-      li Il n'y a pas d'évenements
+      else
+        li Il n'y a pas d'évenements
 
 
 

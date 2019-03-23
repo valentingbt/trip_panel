@@ -5,10 +5,10 @@ block content
   include scripts.html
   link(rel='stylesheet', href='/stylesheets/style.css')
 
-  h1= title
+  h1.title= title
   p Bienvenue sur #[em USABACKEND], notre backend pour le site USA 2019.
 
-  h3 Carte
+  h2.subtitle Carte
 
   #map.z-depth-2
   script(src='javascripts/map.js')
@@ -16,7 +16,7 @@ block content
   a.btn.waves-effect Update 1
   a.btn.waves-effect Update 2
 
-  h3 Contenu dynamique
+  h2.subtitle Contenu dynamique
 
   if error
     p Error getting dynamic content.
