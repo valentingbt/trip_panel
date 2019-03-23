@@ -1,21 +1,14 @@
 head    
+  meta(name='viewport', content='width=device-width, initial-scale=1')
 
 include stylesheets.html
 
 include scripts.html
+
+include navbar
+
+
 // LOGO
-div.field.is-grouped.is-grouped-multiline(style='position:absolute;right:0;margin:10px 10px 0 0;')
-
-  div.control
-    div.tags.has-addons
-      span.tag.is-primary.is-large.is-rounded France
-      span.tag.is-large.is-rounded #{todayParis}
-  
-  div.control
-    div.tags.has-addons
-      span.tag.is-primary.is-large.is-rounded Denver
-      span.tag.is-large.is-rounded #{todayDenver}
-
 section.section
   .has-text-centered
     a(href='#')
@@ -214,4 +207,3 @@ section.section
               else
                 li There are no events.
     
-  a(href='/catalog/') Connexion admin

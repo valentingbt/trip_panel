@@ -1,0 +1,21 @@
+
+nav.nav
+    .navbar-start
+        div.control.navbar-item
+            a(href='/catalog/')
+                span.tag.is-primary.is-large.is-rounded Admin
+                    span.icon(style='margin: 0 0 0 2px;')
+                        i.fas.fa-chevron-right
+
+        .navbar-end
+            div.field.is-grouped.is-grouped-multiline.navbar-item
+
+                div.control
+                    div.tags.has-addons
+                        span.tag.is-primary.is-large.is-rounded France
+                        span.tag.is-large.is-rounded #{todayParis}
+                
+                div.control
+                    div.tags.has-addons
+                        span.tag.is-primary.is-large.is-rounded Denver
+                        span.tag.is-large.is-rounded #{todayDenver}

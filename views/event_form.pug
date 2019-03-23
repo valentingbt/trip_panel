@@ -2,44 +2,45 @@ extends layout
 
 block content  
   h1.title #{title}
-
-  form(method='POST' action='')
-    .field
-      label.label(for='date') Date*:
-      .control
-        input#date.input(name='date', type='datetime-local', required='true', value=(undefined===event ? '' : event.date))
-  
-    .field
-      label.label(for='title') Titre*:
-      .control
-        input#title.input(name='title', type='text', required='true', value=(undefined===event ? '' : event.title))
-  
-    .field
-      label.label(for='description') Description:
-      .control
-        textarea#description.textarea(name='description', value=(undefined===event ? '' : event.description))
+  div.column.is-half
+    form(method='POST' action='')
+      .field
+        label.label(for='date') Date*:
+        .control
+          input#date.input(name='date', type='datetime-local', required='true', value=(undefined===event ? '' : event.date))
     
-    .field
-      label.label(for='isDone') Etat*:
-      .control
-        .select
-          select#isDone(name='isDone', type='select', placeholder='Selectionnez etat', required='true')
-            option(value="false") En cours
-            option(value="true") Terminé
-
-    .field-body
       .field
-        label.label(for='longitude') Longitude:
+        label.label(for='title') Titre*:
         .control
-          input#longitude.input(name='longitude', type='number', value=(undefined===event ? '' : event.longitude))
-
+          input#title.input(name='title', type='text', required='true', value=(undefined===event ? '' : event.title))
+    
       .field
-        label.label(for='latitude') Latitude:
+        label.label(for='description') Description:
         .control
-          input#latitude.input(name='latitude', type='number', value=(undefined===event ? '' : event.latitude))
-    .field(style='margin-top:20px;')
-      .control
-        button.button.is-primary(type='submit') Envoyer
+          textarea#description.textarea(name='description', value=(undefined===event ? '' : event.description))
+      
+      .field
+        label.label(for='isDone') Etat*:
+        .control
+          .select
+            select#isDone(name='isDone', type='select', placeholder='Selectionnez etat', required='true')
+              option(value="false") En cours
+              option(value="true") Terminé
+
+      .field-body
+        .field
+          label.label(for='longitude') Longitude:
+          .control
+            input#longitude.input(name='longitude', type='number', value=(undefined===event ? '' : event.longitude))
+
+        .field
+          label.label(for='latitude') Latitude:
+          .control
+            input#latitude.input(name='latitude', type='number', value=(undefined===event ? '' : event.latitude))
+      br
+      .field(style='margin-top:0px;')
+        .control
+          button.button.is-primary(type='submit') Envoyer
   if errors 
    ul
     for error in errors

@@ -11,10 +11,17 @@ html(lang='fr')
 
 
   body
-    a.button.is-primary(href='/')
-      span.icon
-        i.fas.fa-chevron-left
-      span Retour sur le site
+    nav.nav
+    .navbar-start
+        div.control.navbar-item
+            a(href='/')
+                span.tag.is-primary.is-large.is-rounded
+                    span.icon(style='margin: 0 2px 0 0px;')
+                        i.fas.fa-chevron-left
+                    div Site
+    
+
+
     .columns(style='margin: 10px 0 0 10px;')
       .column.is-one-fifth
         aside.menu
