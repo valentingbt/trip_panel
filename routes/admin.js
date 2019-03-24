@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var event_controller = require('../controllers/eventController');
-var index_controller = require('../controllers/indexController');
+var position_controller = require('../controllers/positionController');
 
 /// EVENT ROUTES ///
 
@@ -32,5 +32,10 @@ router.get('/event/:id', event_controller.event_detail);
 
 // GET request for list of all Event items.
 router.get('/events', event_controller.event_list);
+
+// POSITION ROUTES
+
+// GET request for the update of positions
+router.get('/position/update', position_controller.position_update);
 
 module.exports = router;

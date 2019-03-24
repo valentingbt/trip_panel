@@ -132,7 +132,7 @@ exports.event_delete_post = function (req, res) {
             Event.findByIdAndRemove(req.body.eventid, function deleteEvent(err) {
                 if (err) { return next(err); }
                 // Success - go to event list
-                res.redirect('/catalog/events')
+                res.redirect('/admin/events')
             })
         }
     });

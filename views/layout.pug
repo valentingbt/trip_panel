@@ -4,6 +4,7 @@ html(lang='fr')
     title= title
     meta(charset='utf-8')
 
+    include scripts.html
     include stylesheets.html
 
     // Let browser know website is optimized for mobile
@@ -28,12 +29,15 @@ html(lang='fr')
           p.menu-label General
           ul.menu-list
             li 
-              a(href='/catalog') Accueil administration
+              a(href='/admin') Accueil administration
+          p.menu-label Carte
+            ul.menu-list
+              a(href='/admin/position/update') Mettre à jour les positions   
           p.menu-label Planning
           ul.menu-list
             li
-              a(href='/catalog/events') Liste des évènements
-              a(href='/catalog/event/create') Créer un évenement
+              a(href='/admin/events') Liste des évènements
+              a(href='/admin/event/create') Créer un évenement
 
       .column
         block content

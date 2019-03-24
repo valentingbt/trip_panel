@@ -6,22 +6,15 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
 
   h1.title= title
-  p Bienvenue sur #[em USABACKEND], notre backend pour le site USA 2019.
+  p Bienvenue sur l'administration de #[em Notre voyage aux USA]. Ici, vous pouvez contrôler le planning et la carte.
 
-  h2.subtitle Carte
-
-  #map.z-depth-2
-  script(src='javascripts/map.js')
   br
-  a.btn.waves-effect Update 1
-  a.btn.waves-effect Update 2
-
-  h2.subtitle Contenu dynamique
+  hr
 
   if error
     p Error getting dynamic content.
   else
-    p Contenu de la base de donnée :
+    h2.subtitle Contenu de la base de données :
 
     ul
       li #[strong Evenements:] !{data.event_count}
