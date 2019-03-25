@@ -1,11 +1,21 @@
 extends layout
 
-block content
 
+block content
+	script(src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js')
+	link(href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet')
 	h1.title= title
 
-	#map
-	script(src='javascripts/map.js')
+	div(id='map' style='width: 400px; height: 300px;')
+
+	script(src='/javascripts/mapbox.js')
+	link(rel="stylesheet", href="/stylesheets/map.css")
+
+
+
+
+	//#map
+
 	br
-	a.button Update Val
-	a.button Update Flo
+	a.button Mettre à jour Valentin
+	a.button Mettre à jour Florian
