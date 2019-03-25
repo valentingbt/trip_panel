@@ -1,209 +1,208 @@
 head    
   meta(name='viewport', content='width=device-width, initial-scale=1')
+  
+  
+  include stylesheets.html 
+  include scripts.html
+  include navbar
 
-include stylesheets.html
-
-include scripts.html
-
-include navbar
-
-
-// LOGO
-section.section
-  .has-text-centered
-    a(href='#')
-      img#logo(src='images/logo_usa.png' alt='Notre voyage aux USA')
-// TUILES
-section.section
-  .tile.is-ancestor
-    .tile.is-vertical.is-8
-      .tile
-        .tile.is-parent.is-vertical
-          article.tile.is-child.notification.is-primary
-            .columns.is-vcentered
-              .column.has-text-centered
-                img(src='images/icone_valentin.png' alt='Valentin' width='120px')
-                p.subtitle Valentin
-              .column.has-text-centered.is-half
-                a.button.is-primary.is-fullwidth.is-inverted(href='https://www.facebook.com/valentingubrt')
-                  span.icon
-                    i.fab.fa-facebook
-                  span Valentin Guibert
-                a.button.is-primary.is-fullwidth.is-inverted(href='https://www.instagram.com/valentinguibert/')
-                  span.icon
-                    i.fab.fa-instagram
-                  span valentinguibert
-                a.button.is-primary.is-fullwidth.is-inverted(href='https://twitter.com/VGuibert')
-                  span.icon
-                    i.fab.fa-twitter
-                  span @VGuibert
-                a.button.is-primary.is-fullwidth.is-inverted
-                  span.icon
-                    i.fas.fa-phone
-                  span +33 6 88 00 23 15
-          article.tile.is-child.notification.is-info
-            .columns.is-vcentered
-              .column.has-text-centered
-                img(src='/images/icone_florian.png' alt='Florian' width='120px')
-                p.subtitle Florian
-              .column.has-text-centered.is-half
-                a.button.is-info.is-fullwidth.is-inverted(href='https://www.facebook.com/florian.rouaud.1')
-                  span.icon
-                    i.fab.fa-facebook
-                  span Florian Rouaud
-                a.button.is-info.is-fullwidth.is-inverted(href='https://www.instagram.com/floww_rd/')
-                  span.icon
-                    i.fab.fa-instagram
-                  span floww_rd
-                a.button.is-info.is-fullwidth.is-inverted
-                  span.icon
-                    i.fas.fa-phone
-                  span +33 6 14 43 17 86
+body
+  // LOGO
+  section.section
+    .has-text-centered
+      a(href='#')
+        img#logo(src='images/logo_usa.png' alt='Notre voyage aux USA')
+  // TUILES
+  section.section
+    .tile.is-ancestor
+      .tile.is-vertical.is-8
+        .tile
+          .tile.is-parent.is-vertical
+            article.tile.is-child.notification.is-primary
+              .columns.is-vcentered
+                .column.has-text-centered
+                  img(src='images/icone_valentin.png' alt='Valentin' width='120px')
+                  p.subtitle Valentin
+                .column.has-text-centered.is-half
+                  a.button.is-primary.is-fullwidth.is-inverted(href='https://www.facebook.com/valentingubrt')
+                    span.icon
+                      i.fab.fa-facebook
+                    span Valentin Guibert
+                  a.button.is-primary.is-fullwidth.is-inverted(href='https://www.instagram.com/valentinguibert/')
+                    span.icon
+                      i.fab.fa-instagram
+                    span valentinguibert
+                  a.button.is-primary.is-fullwidth.is-inverted(href='https://twitter.com/VGuibert')
+                    span.icon
+                      i.fab.fa-twitter
+                    span @VGuibert
+                  a.button.is-primary.is-fullwidth.is-inverted
+                    span.icon
+                      i.fas.fa-phone
+                    span +33 6 88 00 23 15
+            article.tile.is-child.notification.is-info
+              .columns.is-vcentered
+                .column.has-text-centered
+                  img(src='/images/icone_florian.png' alt='Florian' width='120px')
+                  p.subtitle Florian
+                .column.has-text-centered.is-half
+                  a.button.is-info.is-fullwidth.is-inverted(href='https://www.facebook.com/florian.rouaud.1')
+                    span.icon
+                      i.fab.fa-facebook
+                    span Florian Rouaud
+                  a.button.is-info.is-fullwidth.is-inverted(href='https://www.instagram.com/floww_rd/')
+                    span.icon
+                      i.fab.fa-instagram
+                    span floww_rd
+                  a.button.is-info.is-fullwidth.is-inverted
+                    span.icon
+                      i.fas.fa-phone
+                    span +33 6 14 43 17 86
+          .tile.is-parent
+            article.tile.is-child.notification.is-danger
+              p.title Positions
+              #map
+              script(src='javascripts/map.js')
         .tile.is-parent
-          article.tile.is-child.notification.is-danger
-            p.title Positions
-            #map
-            script(src='javascripts/map.js')
-      .tile.is-parent
-        article.tile.is-child.notification.is-warning
-          p.title Photos
-            
-            // Content
-    .tile.is-parent
-      article.tile.is-child.notification.is-success
-        .content
-          p.title #{title_planning}
-            ul(style='margin: 0')
-              // 08/04
-              p.subtitle Lundi 08 Avril
-              each event in event_list
-                if event.day_number == "08"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 09/04
-              p.subtitle Mardi 09 Avril
-              each event in event_list
-                if event.day_number == "09"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 10/04
-              p.subtitle Mercredi 10 Avr
-              each event in event_list
-                if event.day_number == "10"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 11/04
-              p.subtitle Jeudi 11 Avril
-              each event in event_list
-                if event.day_number == "11"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 12/04
-              p.subtitle Vendredi 12 Avril
-              each event in event_list
-                if event.day_number == "12"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 13/04
-              p.subtitle Samedi 13 Avril
-              each event in event_list
-                if event.day_number == "13"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 14/04
-              p.subtitle Dimanche 14 Avril
-              each event in event_list
-                if event.day_number == "14"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-                  
-              // 15/04
-              p.subtitle Lundi 15 Avril
-              each event in event_list
-                if event.day_number == "15"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 16/04
-              p.subtitle Mardi 16 Avril
-              each event in event_list
-                if event.day_number == "16"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
-
-              // 17/04
-              p.subtitle Mercredi 17 Avril
-              each event in event_list
-                if event.day_number == "17"
-                    li.is-flex
-                      if event.date > dateFrance
-                        a.button.is-success.is-loading.is-small a
-                      else
-                        span.icon
-                          i.fas.fa-check
-
-                      p #{event.hour} #{event.title}
+          article.tile.is-child.notification.is-warning
+            p.title Photos
               
-              else
-                li There are no events.
-    
+              // Content
+      .tile.is-parent
+        article.tile.is-child.notification.is-success
+          .content
+            p.title #{title_planning}
+              ul(style='margin: 0')
+                // 08/04
+                p.subtitle Lundi 08 Avril
+                each event in event_list
+                  if event.day_number == "08"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 09/04
+                p.subtitle Mardi 09 Avril
+                each event in event_list
+                  if event.day_number == "09"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 10/04
+                p.subtitle Mercredi 10 Avr
+                each event in event_list
+                  if event.day_number == "10"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 11/04
+                p.subtitle Jeudi 11 Avril
+                each event in event_list
+                  if event.day_number == "11"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 12/04
+                p.subtitle Vendredi 12 Avril
+                each event in event_list
+                  if event.day_number == "12"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 13/04
+                p.subtitle Samedi 13 Avril
+                each event in event_list
+                  if event.day_number == "13"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 14/04
+                p.subtitle Dimanche 14 Avril
+                each event in event_list
+                  if event.day_number == "14"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+                    
+                // 15/04
+                p.subtitle Lundi 15 Avril
+                each event in event_list
+                  if event.day_number == "15"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 16/04
+                p.subtitle Mardi 16 Avril
+                each event in event_list
+                  if event.day_number == "16"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+
+                // 17/04
+                p.subtitle Mercredi 17 Avril
+                each event in event_list
+                  if event.day_number == "17"
+                      li.is-flex
+                        if event.date > dateFrance
+                          a.button.is-success.is-loading.is-small a
+                        else
+                          span.icon
+                            i.fas.fa-check
+
+                        p #{event.hour} #{event.title}
+                
+                else
+                  li There are no events.
+      

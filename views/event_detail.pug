@@ -2,12 +2,12 @@ extends layout
 
 block content
 
-  h1 #{title} "#{event.title}"
-  p #{event.day} #{event.hour}
+  h1.title #{title} "#{event.title}"
+  p.subtitle #{event.day} #{event.hour}
   
   div(style='margin-left:20px;margin-top:20px')
 
-        div.divider
+        hr
         p
             a(href=event.url+'/delete') Supprimer l'évenement
 

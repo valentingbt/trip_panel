@@ -33,7 +33,7 @@ var EventSchema = new Schema(
 EventSchema
     .virtual('url')
     .get(function () {
-        return '/catalog/event/' + this._id;
+        return '/admin/event/' + this._id;
     });
 
 EventSchema

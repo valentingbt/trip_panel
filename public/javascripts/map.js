@@ -15,13 +15,13 @@
     var marker = L.marker([47.436724, -2.089398], { icon: pulsingIcon }).addTo(map);
 
     var valIcon = L.icon({
-        iconUrl: './assets/icons/icone_valentin.png',
+        iconUrl: '/images/icone_valentin.png',
 
         iconSize: [40, 40], // size of the icon
     });
 
     var floIcon = L.icon({
-        iconUrl: './assets/icons/icone_florian.png',
+        iconUrl: '/images/icone_florian.png',
 
         iconSize: [40, 40], // size of the icon
     });
