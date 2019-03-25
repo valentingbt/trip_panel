@@ -2,8 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5ndWliZXJ0IiwiYSI6ImNqc2Q5am9yNjA4M
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-96, 37.8],
-    zoom: 3
+    center: [-1.5278079999999998, 47.194112],
+    zoom: 7
 });
 
 var geojson = {
@@ -12,22 +12,11 @@ var geojson = {
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [-77.032, 38.913]
+            coordinates: [-1.5278079999999998, 47.194112]
         },
         properties: {
             title: 'Mapbox',
             description: 'Washington, D.C.'
-        }
-    },
-    {
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [-122.414, 37.776]
-        },
-        properties: {
-            title: 'Mapbox',
-            description: 'San Francisco, California'
         }
     }]
 };

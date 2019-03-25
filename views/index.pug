@@ -5,7 +5,8 @@ head
   include stylesheets.html 
   include scripts.html
   include navbar
-
+  script(src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet')
 body
   // LOGO
   section.section
@@ -62,7 +63,8 @@ body
             article.tile.is-child.notification.is-danger
               p.title Positions
               #map
-              script(src='javascripts/map.js')
+              script(src='/javascripts/mapbox.js')
+              link(rel="stylesheet", href="/stylesheets/map.css")
         .tile.is-parent
           article.tile.is-child.notification.is-warning
             p.title Photos
