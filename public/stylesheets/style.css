@@ -11,9 +11,32 @@
   src: local("Open Sans"), local("OpenSans"), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format("woff2");
 }
 
+.isNotDone {
+  opacity: 0.7;
+}
+
 p,
 a {
   font-family: ProductSans;
+}
+
+.fa-check {
+  margin-right: 5px;
+}
+
+.is-flex {
+  align-items: center;
+}
+
+.is-loading {
+  margin-right: 2px;
+}
+
+.event {
+  margin-bottom: 10px;
+}
+
+.contact-button {
   margin-bottom: 10px;
 }
 
