@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+	h1.title= title
+	table.table
+		thead
+			tr
+				th Nom
+				th Rôle
+				th Date de création
+		tbody
+			each user in user_list
+				tr
+					td #{user.name} 
+					td #{user.role}
+					td #{user.dateCreated}
+
+
+			else
+				li Il n'y a pas d'utilisateurs

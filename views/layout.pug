@@ -33,12 +33,18 @@ html(lang='fr')
               a(href='/admin') Accueil administration
           p.menu-label Carte
             ul.menu-list
-              a(href='/admin/position/update') Mettre à jour les positions   
+              a(href='/admin/position/update') Mettre à jour les positions
+              a(href='/admin/position/list') Historique des positions
+              a(href='/admin/position/create') Entrer une position
           p.menu-label Planning
           ul.menu-list
             li
               a(href='/admin/events') Liste des évènements
               a(href='/admin/event/create') Créer un évenement
+          p.menu-label Utilisateurs
+            ul.menu-list
+              a(href='/admin/user/list') Liste des utilisateurs
+              a(href='/admin/user/create') Créer un utilisateur
 
       .column
         block content

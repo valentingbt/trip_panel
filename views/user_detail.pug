@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  h1.title #{title} "#{user.name}"
+  
+  div(style='margin-left:20px;margin-top:20px')
+
+        hr
+        p
+            a(href=user.url+'/delete') Supprimer l'utilisateur
+
+        p
+            a(href=user.url+'/update') Modifier l'utilisateur
+
+        

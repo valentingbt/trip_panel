@@ -3,6 +3,7 @@ var router = express.Router();
 
 var event_controller = require('../controllers/eventController');
 var position_controller = require('../controllers/positionController');
+var user_controller = require('../controllers/userController');
 
 /// EVENT ROUTES ///
 
@@ -37,5 +38,22 @@ router.get('/events', event_controller.event_list);
 
 // GET request for the update of positions
 router.get('/position/update', position_controller.position_update);
+
+// GET request for the list of positions
+router.get('/position/list', position_controller.position_list);
+
+// USER ROUTES
+
+// GET request for the list of users
+router.get('/user/list', user_controller.user_list);
+
+// GET request for creating a User. NOTE This must come before routes that display Book (uses id).
+router.get('/user/create', user_controller.user_create_get);
+
+// POST request for creating User.
+router.post('/user/create', user_controller.user_create_post);
+
+// GET request for one User.
+router.get('/user/:id', user_controller.user_detail);
 
 module.exports = router;

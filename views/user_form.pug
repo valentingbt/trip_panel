@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	h1.title #{title}
+	.column.is-half
+		form(methode='POST' action="")
+			.field
+				label.label(for='name') Nom*:
+				.control
+					input#name.input(name='name', type="text", required='true')
+
+			.field
+				label.label(for='password') Mot de passe*: 
+				.control
+					input#password.input(name='password', type="password", required='true')
+
+			.field
+				label.label(for='role') Rôle*:
+				.control
+					.select
+						select#role(name='role', type='select', placeholder="Séléctionner un rôle", required='true')
+							option(value="user") Utilisateur
+							option(value="admin") Admin
+
+			.field
+				.control
+					button.button.is-primary(type='submit') Envoyer
+	if errors 
+		ul
+			for error in errors
+				li!= error.msg
+				
